@@ -1,0 +1,120 @@
+// Import any additional SCSS files or libraries you might need
+@import "@angular/material/theming";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500,700&display=swap');
+
+
+// Define your theme colors, fonts, and other variables
+$primary-color: #6ea6d6;
+$secondary-color: #5c584d;
+$background-color: #f5f5f5;
+$font-family: 'Roboto', sans-serif;
+$font-size: 14px;
+$border-radius: 6px;
+
+// Apply your theme colors, fonts, and other styles
+html, body {
+  font-family: $font-family;
+  background-color: $background-color;
+  color: #333;
+  font-size: $font-size;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $primary-color;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  background-color: $primary-color;
+  border: none;
+  border-radius: $border-radius;
+  color: #fff;
+  cursor: pointer;
+  font-family: $font-family;
+  font-size: $font-size;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+
+  &:disabled {
+    background-color: lighten($primary-color, 30%);
+    cursor: not-allowed;
+  }
+}
+
+input, textarea, select {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: $border-radius;
+  font-family: $font-family;
+  font-size: $font-size;
+  padding: 6px 12px;
+  width: 100%;
+
+  &:focus {
+    border-color: $primary-color;
+    outline: none;
+  }
+
+  &[type="submit"] {
+    @extend button;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.col-1 {
+  flex: 0 0 8.333333%;
+  max-width: 8.333333%;
+}
+
+.form {
+  margin: 0 auto;
+  width: 50%;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: $border-radius;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
